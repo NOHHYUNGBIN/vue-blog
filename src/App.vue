@@ -1,5 +1,5 @@
 <script setup>
-import List from "@/components/List.vue";
+// import List from "@/components/List.vue";
 import { ref } from "vue";
 import initData from "./assets/blog";
 const data = ref(initData);
@@ -38,11 +38,10 @@ const data = ref(initData);
       </div>
     </div>
   </nav>
-
-  <div>
-    <h5>테스트로 만드는 페이지입니다.</h5>
-  </div>
-  <List :blogData="data" />
+  <router-link to="/">홈</router-link>
+  <router-link to="/list">리스트</router-link>
+  <router-view :blogData="data"></router-view>
+  <!-- <List :blogData="data" /> -->
 </template>
 
 <style scoped>
