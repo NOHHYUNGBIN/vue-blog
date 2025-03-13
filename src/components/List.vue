@@ -6,7 +6,7 @@ const props = defineProps({
 
 <template>
   <div v-for="data in blogData" :key="data.number">
-    <h5>{{ data.title }}</h5>
+    <h5 @click="$router.push(`/detail/${data.number}`)">{{ data.title }}</h5>
     <p>{{ data.date }}</p>
   </div>
 </template>

@@ -2,6 +2,7 @@
 // import List from "@/components/List.vue";
 import { ref } from "vue";
 import initData from "./assets/blog";
+import { RouterLink, RouterView } from "vue-router";
 const data = ref(initData);
 </script>
 
@@ -38,9 +39,9 @@ const data = ref(initData);
       </div>
     </div>
   </nav>
-  <router-link to="/">홈</router-link>
-  <router-link to="/list">리스트</router-link>
-  <router-view :blogData="data"></router-view>
+  <RouterLink to="/">홈</RouterLink>
+  <RouterLink to="/list">리스트</RouterLink>
+  <RouterView :blogData="data"></RouterView>
   <!-- <List :blogData="data" /> -->
 </template>
 
